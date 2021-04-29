@@ -109,13 +109,21 @@
         background: transparent;
         border: 0;
         font-size: 0; // por padrão alinha a imagem tendo como base o font-size, deixando-o como 0 vai centralizar a imagem
+        transition: filter 0.2s;
+
+        &:hover:not(:disabled){
+            filter: brightness(0.8)
+        }
 
         &.playButton {
             width: 4rem;
             height: 4rem;
             border-radius: 1rem;
-
             background: var(--purple-400);
+
+            &:hover {
+                filter: brightness(0.95);
+            }
         }
     }
 }
