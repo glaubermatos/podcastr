@@ -111,7 +111,10 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                     <td style={{ width: 100 }}>{episode.publishedAt}</td>
                     <td>{episode.durationAsString}</td>
                     <td>
-                      <button type="button">
+                      <button
+                        type="button"
+                        onClick={() => { alert(`Tocar episodio ${episode.title}`) }}
+                      >
                         <img src="/play-green.svg" alt="Tocar episódio" />
                       </button>
                     </td>
